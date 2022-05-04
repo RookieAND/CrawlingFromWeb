@@ -20,7 +20,7 @@ def inspect_category(cate_func, cate_name):
 
         # 각 항목 별 베스트셀러의 경우 1등부터 20등까지 나열됨 (20위까지만 크롤링 -> 더 찾을 수 있지만 우선 여기까지)
         # 해당 책들의 바코드 값을 넘겨, 상세 페이지로부터 얻은 값들을 하나의 list로 묶어서 처리함.
-        for barcode in barcodes_list[:2]:
+        for barcode in barcodes_list:
             if barcode is not None:
                 crawl_result.append(get_book_info(cate_name, barcode))
         wd.quit()
